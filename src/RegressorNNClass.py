@@ -4,7 +4,7 @@ from abc import ABC
 
 import numpy as np
 
-from lib.ml_models.BaseKerasNNClass import BaseKerasNNClass
+from src.BaseKerasNNClass import BaseKerasNNClass
 
 
 class RegressorNNClass(BaseKerasNNClass, ABC):
