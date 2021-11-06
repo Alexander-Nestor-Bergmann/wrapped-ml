@@ -20,15 +20,20 @@ from ExampleNNClassifierClass import ExampleNNClassifierClass
 network_architecture: list = [('Dense', {'units': 8, 'activation': 'relu'}),
                               ('Dropout', {'rate': 0.1}),
                               ('Dense', {'units': 1, 'activation': 'sigmoid'})]
-# Initialise the model with starting params (Note, you'll also have to specify input shape)
+# Build params that are passed to the base model (Note, you'll also have to specify input shape)
 network_input_data: dict = {'network_architecture': network_architecture}
 # This example class takes a string as a dummy example custom input
 dummy_input: str = "test"
+
+# Build the classifier
 my_classifier = ExampleNNClassifierClass(dummy_input, network_input_data)
+
 # Build and train the model using a test and train Dataframe
 my_classifier.train_model(train_df=some_train_df, test_df=some_test_df)
+
 # Optionally calibrate probabilties
 my_classifier.calibrate_probabilities()
+
 # Evaluate on some validation data, with orptional parameters in Dict: testing_func_args
 my_classifier.evaluate_on_test_data(validation_input, validation_output, testing_args=testing_func_args)
 
