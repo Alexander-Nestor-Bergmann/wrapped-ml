@@ -1,16 +1,14 @@
 #!/usr/bin/env python
 # encoding: utf-8
 
-import dill
-import numpy as np
-import matplotlib.pyplot as plt
-
-from sklearn.calibration import CalibratedClassifierCV
-from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay, classification_report
-from sklearn.metrics import roc_curve, roc_auc_score, brier_score_loss
-
 from abc import ABCMeta, abstractmethod
-from typing import Dict, Tuple, List
+
+import dill
+import matplotlib.pyplot as plt
+import numpy as np
+from sklearn.calibration import CalibratedClassifierCV
+from sklearn.metrics import ConfusionMatrixDisplay, classification_report, confusion_matrix
+from sklearn.metrics import brier_score_loss, roc_auc_score, roc_curve
 
 
 class BaseMachineLearningClass(object, metaclass=ABCMeta):
