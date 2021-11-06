@@ -1,23 +1,21 @@
 #!/usr/bin/env python
 # encoding: utf-8
 
-import numpy as np
-import matplotlib.pyplot as plt
-
 from abc import ABCMeta, abstractmethod
-from inspect import getmembers, isclass, isfunction
+from inspect import getmembers, isclass
 
+import matplotlib.pyplot as plt
+import numpy as np
 # from tcn import TCN
 import tensorflow.keras.layers as keras_layers
 import tensorflow.keras.optimizers as keras_optimisers
-from tensorflow.keras import Model, Input
-from tensorflow.keras.models import load_model
+from tensorflow.keras import Input, Model
 from tensorflow.keras.callbacks import EarlyStopping, ModelCheckpoint
+from tensorflow.keras.models import load_model
 from tensorflow.keras.utils import plot_model
 
-from lib.ml_models.BaseMachineLearningClass import BaseMachineLearningClass
-
 from data.data_paths import NN_DATAPATH
+from src.BaseMachineLearningClass import BaseMachineLearningClass
 
 
 class BaseKerasNNClass(BaseMachineLearningClass, metaclass=ABCMeta):
@@ -249,4 +247,3 @@ class BaseKerasNNClass(BaseMachineLearningClass, metaclass=ABCMeta):
         :return:
         """
         plot_model(self.model, f"{self.name}.png", show_shapes=with_shapes)
-
