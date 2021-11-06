@@ -37,6 +37,8 @@ my_classifier.calibrate_probabilities()
 # Evaluate on some validation data, with orptional parameters in Dict: testing_func_args
 my_classifier.evaluate_on_test_data(validation_input, validation_output, testing_args=testing_func_args)
 
+# Make a prediction
+predictions = my_classifier.predict(new_observations)
 ```
 
 ## Dependencies
