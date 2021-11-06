@@ -1,6 +1,6 @@
 # Welcome to wrapped-ml
 
-wrapped-ml is a machine-learning library that wraps Keras, 
+wrapped-ml is a machine learning library that wraps Keras, 
 Scikit-learn and XGBoost into a common framework.
 
 N.B. this package is in development elsewhere and updates 
@@ -37,9 +37,10 @@ my_classifier.evaluate_on_test_data(validation_input, validation_output, testing
 ## Dependencies
 
 - Python 3.x
-- Numpy ~= 1.19.5
-- matplotlib ~= 3.4.2
-- joblib ~= 1.0.1
-- scikit-learn ~= 0.24.2
-- xgboost ~= 1.4.2
-- dill ~= 0.3.3
+- dill~=0.3.3
+- joblib~=1.0.1
+- matplotlib~=3.4.2
+- numpy~=1.19.5
+- scikit-learn~=0.24.2
+- tensorflow~=2.5.0
+- xgboost~=1.4.2
