@@ -4,7 +4,7 @@ from abc import ABC
 
 import numpy as np
 
-from lib.ml_models.BaseSklearnClass import BaseSklearnClass
+from src.BaseSklearnClass import BaseSklearnClass
 
 
 class ClassifierSklearnClass(BaseSklearnClass, ABC):
