@@ -1,24 +1,22 @@
 #!/usr/bin/env python
 # encoding: utf-8
 
-import joblib
-import numpy as np
-
 from abc import ABCMeta, abstractmethod
 from pathlib import Path
 
-from sklearn.svm import SVC, SVR
-from sklearn.linear_model import LogisticRegression
-from sklearn.neighbors import KNeighborsClassifier, KNeighborsRegressor
+import joblib
+import numpy as np
+from sklearn.ensemble import AdaBoostClassifier, AdaBoostRegressor, RandomForestClassifier, RandomForestRegressor
 from sklearn.gaussian_process import GaussianProcessClassifier, GaussianProcessRegressor
-from sklearn.tree import DecisionTreeClassifier, DecisionTreeRegressor
-from sklearn.ensemble import RandomForestClassifier, AdaBoostClassifier, RandomForestRegressor, AdaBoostRegressor
+from sklearn.linear_model import LogisticRegression
 from sklearn.naive_bayes import GaussianNB
+from sklearn.neighbors import KNeighborsClassifier, KNeighborsRegressor
+from sklearn.svm import SVC, SVR
+from sklearn.tree import DecisionTreeClassifier, DecisionTreeRegressor
 from xgboost import XGBClassifier, XGBRegressor
 
-from lib.ml_models.BaseMachineLearningClass import BaseMachineLearningClass
-
 from data.data_paths import SKLEARN_DATAPATH
+from src.BaseMachineLearningClass import BaseMachineLearningClass
 
 MODEL_NAME_DICT: dict = {'SVC': SVC, 'SVR': SVR, 'LogisticRegression': LogisticRegression,
                          'GaussianProcessClassifier': GaussianProcessClassifier,
