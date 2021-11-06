@@ -1,10 +1,6 @@
 #!/usr/bin/env python
 # encoding: utf-8
 
-import numpy as np
-import tensorflow.keras as keras
-import warnings
-
 from abc import ABC
 from typing import Dict, List, Tuple
 
@@ -42,4 +38,3 @@ class ExampleNNClassifierClass(ClassifierNNClass, ABC):
         Can add custom functions that are unique, or overload those of ClassifierNNClass
         """
         return f"{example_input} with example input param {self.my_example_param}"
-
