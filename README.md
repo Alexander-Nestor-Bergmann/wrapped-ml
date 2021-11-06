@@ -3,7 +3,7 @@
 wrapped-ml is a machine learning library that wraps Keras, 
 Scikit-learn and XGBoost into a common framework.
 
-N.B. this package is in development elsewhere and updates 
+NB this package is in development elsewhere and updates 
 will be posted to this repository sparingly, as they finish.
 In the meantime, feel free to use what's here!
 <hr/>
