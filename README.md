@@ -31,8 +31,8 @@ my_classifier = ExampleNNClassifierClass(dummy_input, network_input_data)
 # Build and train the model using a test and train Dataframe
 my_classifier.train_model(train_df=some_train_df, test_df=some_test_df)
 
-# Optionally calibrate probabilties
-my_classifier.calibrate_probabilities()
+# Optionally calibrate probabilties (dont use training data!)
+my_classifier.calibrate_probabilities(x_data, y_data)
 
 # Evaluate on some validation data, with orptional parameters in Dict: testing_func_args
 my_classifier.evaluate_on_test_data(validation_input, validation_output, testing_args=testing_func_args)
